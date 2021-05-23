@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="CSE_Library">
+        <environment id="CSE_Library">
+            <transactionManager type="JDBC"/>
+            <!-- 数据库连接配置-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/cse_library?useUnicode=true&amp;characterEncoding=utf-8"/>
+                <property name="username" value="cse_library_manager"/>
+                <property name="password" value="Eis)R_s*1Fpb;w~|^avsT"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!-- mapper配置-->
+        <mapper resource="mapper/BookMapper.xml"/>
+        <mapper resource="mapper/UserMapper.xml"/>
+
+    </mappers>
+</configuration>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BookMapper">
+
+    <!--查询所有的书籍-->
+    <select id="get_all_books"  resultType="entity.Book">
+        SELECT *  FROM  books
+    </select>
+
+    <!--  按照书名查询书籍  -->
+    <select id="getBookByKeyWord" parameterType="String" resultType="entity.Book">
+        select * from books where book_name like '%${keyword}%'
+    </select>
+
+
+</mapper>
